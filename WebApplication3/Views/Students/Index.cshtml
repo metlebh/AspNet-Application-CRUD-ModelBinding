@@ -1,0 +1,61 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link rel="stylesheet" href="~/css/home.css" />
+
+</head>
+<body>
+    <div class="form container-sm">
+
+
+
+
+        <div class="container-sm">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Surname</th>
+                        <th scope="col">Speciality</th>
+                        <th scope="col">Age</th>
+                        <th>Action</th>
+                        <th > <a asp-action="create">Create</a> </th>
+                    </tr>
+                    @for (int i = 0; i < Model.Count; i++)
+                    {
+                        var student = Model[i];
+                        <tr>
+                            <td>@(i + 1)</td>
+                            <td>@student.Name</td>
+                            <td>@student.Surname</td>
+                            <td>@student.Speciality</td>
+                            <td>@student.Age</td>
+                            <td>
+                                   <a asp-action="update" asp-route-id="@student.Id">Update</a>
+                                <a asp-action="detials" asp-route-id="@student.Id">detials</a>
+                                <a asp-action="delete" asp-route-id="@student.Id">Delete</a>
+
+
+                            </td>
+                        </tr>
+
+                    }
+            </table>
+        </div>
+    </div>
+</body>
+</html>
+<
+
+
+
+

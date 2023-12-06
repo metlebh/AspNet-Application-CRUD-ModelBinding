@@ -1,0 +1,23 @@
+﻿body {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+.your-choosen {
+    padding-top: 20px;
+    gap: 200px;
+    height: 200px;
+    width: 400px;
+    border: 2px solid green;
+}
+
+    .your-choosen a {
+        text-decoration: none;
+        color: black;
+        font-weight: bolder;
+        font-size: large;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
